@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Cadastro";
+}
+
+<h2>Cadastro de Clientes</h2>
+
+@if (ViewBag.Mensagem != null)
+{
+    <h3>@ViewBag.Mensagem</h3>
+}
+
+@{
+
+    using (Html.BeginForm())
+    {
+        <div class="from-group">
+            @Html.TextBox("txtNome_Cli", "", new { @class = "form-control", placeholder = "Nome" })
+        </div>
+        <div class="from-group">
+            @Html.TextBox("txtEmail_Cli", "", new { @class = "form-control", placeholder = "Email" })
+        </div>
+        <div class="from-group">
+            @Html.TextBox("txtTel_Cli", "", new { @class = "form-control", placeholder = "Telefone" })
+        </div>
+        <div class="from-group">
+            @Html.TextBox("txtId_Cli", "", new { @class = "form-control", placeholder = "ID" })
+        </div>
+        <div class="btn-group">
+            <p><input type="submit" class="btn btn-success" value="Cadastrar" /></p>
+                <p><input type="submit" class="btn btn-success" value="listar" /></p>
+            
+
+        </div>
+
+        
+    }
+    
+}
+
